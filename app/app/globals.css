@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+
+:root {
+  --bg: #070b14;
+  --card: #101827;
+  --blue: #2563eb;
+  --cyan: #22d3ee;
+  --text: #f8fafc;
+  --muted: #94a3b8;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Inter', sans-serif;
+  min-height: 100vh;
+}
+
+button, input, textarea {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+::selection {
+  background: var(--blue);
+  color: white;
+}
+
+.container {
+  width: min(1200px, 92%);
+  margin: auto;
+}
+
+.glow {
+  background: linear-gradient(135deg, #2563eb, #22d3ee);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid #1e293b;
+  border-radius: 18px;
+  padding: 24px;
+  transition: 0.3s ease;
+}
+
+.card:hover {
+  border-color: var(--blue);
+  transform: translateY(-4px);
+}
+
+@media (max-width: 600px) {
+  .container {
+    width: 92%;
+  }
+
+  .card {
+    padding: 18px;
+  }
+}
